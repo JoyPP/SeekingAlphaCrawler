@@ -7,7 +7,6 @@ def search_links(symbol):
     req = urllib2.Request(url, headers=hdr)
     html = urllib2.urlopen(req).read()
     soup = BeautifulSoup(html)
-    return soup
-
-tables = soup.find_all("div", class_="content_block_investment_views")[0]
+    tables = soup.find_all("div", class_="content_block_investment_views")[0]
+    return tables
 
